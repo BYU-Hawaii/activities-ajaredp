@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 50px;
+    margin: auto;
     padding: 10px;
-    background-color: #f2f2f2;
+    background-image: url("/Users/jaredpauladzuara/Desktop/IT 240/activities-ajaredp-1/Projects/images/background.jpg");
 }
   
 h1, h3 {
@@ -16,7 +16,7 @@ a {
 }
 
 a:hover {
-    color: #007bff;
+    color: #00C292;
 }
   
 img {
@@ -85,5 +85,35 @@ figcaption {
     font-size: small;
     color: #666;
     text-align: center;  
+}
+
+footer {
+    background-color: #00C292;
+    color: #ffffff;
+    padding: 16px 0;
+    text-align: center;
+    margin-top: 32px;
+}
+
+@media(min-width: 768px) {
+    body {
+        padding: 0 30px;
+        font-size: 20px;
+    }
+
+    header nav a {
+        margin: 0 8px;
+    }
+}
+
+@media(min-width: 1024px) {
+    body {
+        padding: 0 35px;
+        font-size: 22px;
+    }
+
+    header nav a {
+        margin: 0 12px;
+    }
 }
   

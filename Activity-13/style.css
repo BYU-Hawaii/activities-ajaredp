@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background-color: #35424a;
+    background-color: #0d6297;
     color: #ffffff;
     padding: 16px 0;
     text-align: center;
@@ -27,7 +27,7 @@ header .topnav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #35424a;
+    background-color: #0d6297;
 }
 
 header .topnav a {
@@ -38,8 +38,30 @@ header .topnav a {
 }
 
 header .topnav a:hover, header .topnav a.active {
-    border-bottom: 3px solid #e8491d;
+    border-bottom: 3px solid #bebab9;
 }
+
+figure {
+    margin: 1px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+  
+figcaption {
+    margin: 10px;
+    padding: 10px;
+    font-size: small;
+    color: #666;
+    text-align: center;  
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  }
 
 main {
     padding: 32px 0;
@@ -48,7 +70,7 @@ main {
 
 main p {
     margin-bottom: 16px;
-    font-size: 19.2px;
+    font-size: 12px;
 }
 
 main .button {
@@ -58,7 +80,7 @@ main .button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 10px;
     transition: background-color 0.3s ease;
 }
 
@@ -67,7 +89,7 @@ main .button:hover {
 }
 
 footer {
-    background-color: #35424a;
+    background-color: #0d6297;
     color: #ffffff;
     padding: 16px 0;
     text-align: center;
@@ -87,9 +109,9 @@ footer a:hover {
     text-decoration: underline;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 768px) {
     body {
-        padding: 0 32px;
+        padding: 0 30px;
     }
 
     header .topnav a {
@@ -97,11 +119,30 @@ footer a:hover {
     }
 
     main p {
+        font-size: 20px;
+    }
+
+    main .button {
+        padding: 15px 30px;
+        font-size: 20px;
+    }
+}
+
+@media(min-width: 1024px) {
+    body {
+        padding: 0 35px;
+    }
+
+    header .topnav a {
+        margin: 0 12px;
+    }
+
+    main p {
         font-size: 24px;
     }
 
     main .button {
-        padding: 12px 32px;
-        font-size: 19.2px;
+        padding: 20px 40px;
+        font-size: 24px;
     }
 }

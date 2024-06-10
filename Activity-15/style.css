@@ -1,3 +1,4 @@
+/* Basic styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -25,7 +26,7 @@ body {
     justify-content: center;
     background: linear-gradient(90deg, #0b5dc0, #0d74d1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
+    position: relative; 
 }
 
 .nav ul {
@@ -46,16 +47,19 @@ body {
 .nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 16px;
+    padding: 16px 32px;
     display: block;
     width: 100%;
     text-align: center;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .nav ul li a:hover {
-    background-color: #0d74d1;
+    background-color: #0853a5;
     color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: 3px solid #fff;
 }
 
 .nav ul li a.active {
@@ -64,7 +68,7 @@ body {
     font-weight: bold;
 }
 
-.nav ul li ul {
+.nav ul li ul { 
     display: none;
     flex-direction: column;
     position: absolute;
@@ -73,25 +77,11 @@ body {
     background: #0b5dc0;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
 .nav ul li:hover ul {
     display: flex;
-}
-
-.main {
-    display: grid;
-    gap: 16px; 
-    padding: 32px;
-    background-color: white;
-}
-
-.content {
-    background-color: #f4f4f4;
-    padding: 24px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -99,7 +89,15 @@ body {
         flex-direction: row;
         justify-content: center;
     }
-    
+
+    .nav ul li {
+        margin: 0;
+    }
+
+    .nav ul li a {
+        width: auto;
+    }
+
     body {
         grid-template-rows: auto auto 1fr auto;
     }
@@ -121,4 +119,19 @@ body {
     .main {
         grid-template-columns: 1fr 1fr 1fr;
     }
+}
+
+.main {
+    display: grid;
+    gap: 16px;
+    padding: 32px;
+    background-color: white;
+}
+
+.content {
+    background-color: #f4f4f4;
+    padding: 24px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

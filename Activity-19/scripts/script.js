@@ -13,8 +13,8 @@ document.getElementById('randomColor').addEventListener('click', function() {
 function displayColor(color) {
     let displayArea = document.getElementById('displayArea');
     displayArea.style.backgroundColor = color;
-    displayArea.textContent = color;  // Display the hexadecimal code
-    document.body.style.backgroundColor = color;  // Change the background color
+    displayArea.textContent = color; 
+    document.body.style.backgroundColor = color; 
 }
 
 function addToHistory(color) {

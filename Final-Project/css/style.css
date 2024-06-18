@@ -1,0 +1,144 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baloo 2', cursive;
+    background-color: #f0f9ff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffdd57;
+    padding: 10px 20px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff6f61;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+#welcome {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #ff6f61 0%, #ffdd57 100%);
+    color: white;
+}
+
+#welcome .hero {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#welcome h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#welcome p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#welcome .cta-button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #ff6f61;
+    font-size: 1.2em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#welcome .cta-button:hover {
+    background-color: #ffdd57;
+}
+
+#features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.feature {
+    text-align: center;
+    margin: 20px;
+    max-width: 250px;
+}
+
+.feature img {
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.feature h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffdd57;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    #features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #welcome h1 {
+        font-size: 2em;
+    }
+
+    #welcome p {
+        font-size: 1em;
+    }
+
+    #welcome .cta-button {
+        font-size: 1em;
+    }
+}

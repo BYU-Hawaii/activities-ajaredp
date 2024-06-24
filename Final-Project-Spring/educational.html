@@ -13,13 +13,18 @@
             <img src="images/logo1.png" alt="Kid's Fun Site Logo">
         </div>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="game.html">Game</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="educational.html">Educational</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
             </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </nav>
     </header>
     <main>
@@ -28,15 +33,30 @@
             <article>
                 <h2>Fun Science Facts</h2>
                 <p>Did you know that a group of flamingos is called a "flamboyance"?</p>
+                <p>Did you know that honey never spoils? Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still edible!</p>
             </article>
             <article>
                 <h2>Interactive Learning</h2>
-                <p>Explore our interactive modules to learn more about the solar system!</p>
+                <p>Explore our interactive modules by taking the quiz below.</p>
+            </article>
+            <article>
+                <h2>Quiz Game</h2>
+                <div id="quiz-container">
+                    <div class="question">
+                        <p>Question text will go here</p>
+                    </div>
+                    <div class="answers">
+                        <!-- Answers will be dynamically inserted here -->
+                    </div>
+                </div>
+                <button id="submit-button">Submit Answers</button>
+                <div id="result-container"></div>
             </article>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Kid's Fun Site</p>
     </footer>
+    <script src="scripts/quiz.js"></script>
 </body>
 </html>

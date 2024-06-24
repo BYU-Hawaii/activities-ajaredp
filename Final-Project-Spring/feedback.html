@@ -13,37 +13,42 @@
             <img src="images/logo1.png" alt="Kid's Fun Site Logo">
         </div>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="game.html">Game</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="educational.html">Educational</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
             </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </nav>
     </header>
     <main>
         <section id="feedback">
-            <h1>Feedback Form</h1>
-            <form action="submit_feedback.php" method="post">
+            <h1>Feedback</h1>
+            <form id="feedbackForm" action="save_feedback.php" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-                
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-                
-                <label for="comments">Comments:</label>
-                <textarea id="comments" name="comments" rows="4" required></textarea>
-                
-                <label for="rating">Rating:</label>
-                <select id="rating" name="rating">
-                    <option value="5">5 - Excellent</option>
-                    <option value="4">4 - Very Good</option>
-                    <option value="3">3 - Good</option>
-                    <option value="2">2 - Fair</option>
-                    <option value="1">1 - Poor</option>
-                </select>
-                
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <div id="rating">
+                    <label>Rating:</label>
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5" class="star">&#9733;</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4" class="star">&#9733;</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3" class="star">&#9733;</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2" class="star">&#9733;</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1" class="star">&#9733;</label>
+                </div>
+
                 <button type="submit">Submit</button>
             </form>
         </section>
@@ -51,5 +56,6 @@
     <footer>
         <p>&copy; 2024 Kid's Fun Site</p>
     </footer>
+    <script src="scripts/validation.js"></script>
 </body>
 </html>

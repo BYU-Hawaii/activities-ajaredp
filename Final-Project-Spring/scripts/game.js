@@ -1,14 +1,17 @@
 const holes = document.querySelectorAll('.hole');
 const scoreBoard = document.getElementById('score');
 const highScoreBoard = document.getElementById('highScore');
+const timeBoard = document.getElementById('time');
 const startButton = document.getElementById('startButton');
 const restartButton = document.getElementById('restartButton');
 const whackSound = document.getElementById('whackSound');
 const bgm = document.getElementById('bgm');
+const difficulty = document.getElementById('difficulty');
 let lastHole;
 let timeUp = false;
 let score = 0;
 let highScore = localStorage.getItem('highScore') || 0;
+let countdown;
 highScoreBoard.textContent = highScore;
 
 function randomTime(min, max) {
@@ -26,7 +29,7 @@ function randomHole(holes) {
 }
 
 function peep() {
-    const time = randomTime(500, 1000);
+    const time = randomTime(500, parseInt(difficulty.value));
     const hole = randomHole(holes);
     hole.classList.add('active');
     setTimeout(() => {
@@ -44,25 +47,32 @@ function startGame() {
     restartButton.style.display = 'block';
     bgm.play();
     peep();
-    setTimeout(() => {
-        timeUp = true;
-        bgm.pause();
-        if (score > highScore) {
-            highScore = score;
-            localStorage.setItem('highScore', highScore);
-            highScoreBoard.textContent = highScore;
+    let time = 20;
+    countdown = setInterval(() => {
+        timeBoard.textContent = --time;
+        if (time === 0) {
+            clearInterval(countdown);
+            timeUp = true;
+            bgm.pause();
+            if (score > highScore) {
+                highScore = score;
+                localStorage.setItem('highScore', highScore);
+                highScoreBoard.textContent = highScore;
+            }
+            restartButton.textContent = 'Restart Game';
         }
-        restartButton.textContent = 'Restart Game';
-    }, 20000); // 20 seconds game time
+    }, 1000);
 }
 
 function restartGame() {
+    clearInterval(countdown);
     timeUp = true;
     startButton.style.display = 'block';
     restartButton.style.display = 'none';
     scoreBoard.textContent = 0;
     score = 0;
     holes.forEach(hole => hole.classList.remove('active'));
+    timeBoard.textContent = 20;
 }
 
 function bonk(e) {

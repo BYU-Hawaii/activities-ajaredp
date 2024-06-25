@@ -66,7 +66,6 @@ header nav .nav-links li a:hover {
     }
 
     header nav .nav-links {
-        display: flex;
         flex-direction: column;
         width: 100%;
         background-color: #ffdd57;
@@ -120,17 +119,14 @@ section p {
 }
 
 #welcome {
-    padding: 50px 20px;
     background: linear-gradient(135deg, #ff6f61 0%, #ffdd57 100%);
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: fadeIn 2s ease-out;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 #welcome .hero {
@@ -188,7 +184,8 @@ section p {
     font-size: 1.2em;
 }
 
-#about {
+#about,
+#educational {
     padding: 40px 20px;
     background-color: #fff;
     color: #333;
@@ -198,6 +195,11 @@ section p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     animation: fadeIn 2s ease-out;
+}
+
+#about .team,
+#educational article {
+    animation: slideInUp 1s ease-out;
 }
 
 #about .team {
@@ -216,7 +218,6 @@ section p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex: 1;
     max-width: 300px;
-    animation: slideInUp 1s ease-out;
 }
 
 #about .team-member img {
@@ -236,23 +237,6 @@ section p {
 #about .team-member p {
     font-size: 1em;
     color: #666;
-}
-
-#educational {
-    padding: 40px 20px;
-    background-color: #fff;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    animation: fadeIn 2s ease-out;
-}
-
-#educational article {
-    margin-bottom: 20px;
-    animation: slideInUp 1s ease-out;
 }
 
 #educational #quiz-container {
@@ -429,22 +413,46 @@ section p {
 }
 
 .score-board {
+    text-align: center;
+    margin: 20px;
+}
+
+.difficulty {
     margin: 20px 0;
+    text-align: center;
+}
+
+.difficulty label {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.difficulty select {
+    font-size: 1em;
+    padding: 5px;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #ff6f61;
-    color: white;
     font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 5px;
     cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
     transition: background-color 0.3s;
+    display: block;
+    margin: 10px auto;
 }
 
 button:hover {
-    background-color: #ffdd57;
+    background-color: #45a049;
+}
+
+#startButton, #restartButton {
+    display: block;
+    margin: 0 auto;
 }
 
 @keyframes fadeIn {

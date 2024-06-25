@@ -32,19 +32,28 @@
             <h1>Whack-a-Mole Game!</h1>
             <div id="gameContainer">
                 <div class="grid">
-                    <div class="hole" data-hole="0"><div class="mole"></div></div>
-                    <div class="hole" data-hole="1"><div class="mole"></div></div>
-                    <div class="hole" data-hole="2"><div class="mole"></div></div>
-                    <div class="hole" data-hole="3"><div class="mole"></div></div>
-                    <div class="hole" data-hole="4"><div class="mole"></div></div>
-                    <div class="hole" data-hole="5"><div class="mole"></div></div>
-                    <div class="hole" data-hole="6"><div class="mole"></div></div>
-                    <div class="hole" data-hole="7"><div class="mole"></div></div>
-                    <div class="hole" data-hole="8"><div class="mole"></div></div>
+                    <div class="hole" data-hole="0"><img class="mole" src="images/mole.png" alt="Mole"></div>
+                    <div class="hole" data-hole="1"><img class="mole" src="images/mole.png" alt="Mole"></div>
+                    <div class="hole" data-hole="2"><img class="mole" src="images/mole.png" alt="Mole"></div>
+                    <div class="hole" data-hole="3"><img class="mole" src="images/mole.png" alt="Mole"></div>
+                    <div class="hole" data-hole="4"><img class="mole" src="images/mole.png" alt="Mole"></div>
+                    <div class="hole" data-hole="5"><img class="mole" src="images/mole.png" alt="Mole"></div>
+                    <div class="hole" data-hole="6"><img class="mole" src="images/mole.png" alt="Mole"></div>
+                    <div class="hole" data-hole="7"><img class="mole" src="images/mole.png" alt="Mole"></div>
+                    <div class="hole" data-hole="8"><img class="mole" src="images/mole.png" alt="Mole"></div>
                 </div>
                 <div class="score-board">
                     <h2>Score: <span id="score">0</span></h2>
                     <h2>High Score: <span id="highScore">0</span></h2>
+                    <h2>Time: <span id="time">20</span>s</h2>
+                </div>
+                <div class="difficulty">
+                    <label for="difficulty">Difficulty:</label>
+                    <select id="difficulty">
+                        <option value="1000">Easy</option>
+                        <option value="750">Medium</option>
+                        <option value="500">Hard</option>
+                    </select>
                 </div>
                 <button id="startButton">Start Game</button>
                 <button id="restartButton" style="display: none;">Restart Game</button>
